@@ -2,9 +2,9 @@
 <%@ include file = "home.jsp" %>
 <%@ page import ="java.util.*" %>
 <%@ page import ="java.lang.*" %>
-<%@ page import ="com.db.db_teamproject.model.Search" %>
+<%@ page import ="com.example.demo.model.Search" %>
 <%@ page import="java.sql.ResultSet" %>
-<%@ page import="com.db.db_teamproject.model.Search" %>
+<%@ page import="com.example.demo.model.Search" %>
 
 <%!
     ArrayList<Boolean> check;

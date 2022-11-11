@@ -1,7 +1,6 @@
 package com.example.demo.service;
 
 import com.example.demo.model.Update;
-import com.example.demo.repository.DeleteRepository;
 import com.example.demo.repository.UpdateRepository;
 
 import java.util.ArrayList;
