@@ -16,7 +16,7 @@
     searches = (ArrayList<Search>) request.getAttribute("searches");
     tableHeaders = (ArrayList<String>) request.getAttribute("tableHeaders");
 %>
-<h1>검색 테이블 출력</h1>
+<h1>검색한 테이블 출력</h1>
 <form method = "post" action="/updates">
     <table border = "1">
         <th>선택</th>
@@ -80,7 +80,9 @@
         %>
     </table>
     <p><input type = "submit" name = "update" value = "DELETE"></p>
-    <p>수정 :
+    <hr>
+    <p>
+        <h2>수정</h2>
         <select name = "updateCategory">
             <option value="address">Address</option>
             <option value="sex">Sex</option>

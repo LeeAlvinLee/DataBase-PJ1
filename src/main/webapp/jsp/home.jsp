@@ -13,9 +13,11 @@
     </style>
 </head>
 <body>
-<h1>메인 페이지</h1>
+<h1>직원 검색 시스템</h1>
+<h4>[ Team : 2022-DB-452-B-02 ]</h4>
+<hr>
 <form method="get" action="/search">
-    <h2>검색 범위</h2>
+    <h3>Attribute에서 조건 선택</h3>
     <select name = "mainCategory" onchange="categoryChange(this)">
         <option value="none" selected>전체</option>
         <option value="department">부서</option>
@@ -50,7 +52,9 @@
             }
         }
     </script>
-    <h2>검색 항목</h2>
+    <hr>
+    <h2>검색 필터</h2>
+    <h5>테이블에서 보고 싶은 Attribute만 선택해주세요.</h5>
     <label><input type="checkbox" name="name" value="1" checked> Name</label>
     <label><input type="checkbox" name="ssn" value="1" checked> Ssn</label>
     <label><input type="checkbox" name="bdate" value="1" checked> Bdate</label>
@@ -59,11 +63,13 @@
     <label><input type="checkbox" name="salary" value="1" checked> Salary</label>
     <label><input type="checkbox" name="supervisor" value="1" checked> Supervisor</label>
     <label><input type="checkbox" name="department" value="1" checked> Department</label>
-    <p><input type="submit" value="검색"></p>
+    <p><input type="submit" value="테이블 보여지기 버튼"></p>
 </form>
+<hr>
 <form method = "get" action = "/insertPage">
     <h2>직원 정보 추가</h2>
-    <p><input type="submit" value="직원 정보 추가 페이지로 가기"></p>
+    <p><input type="submit" value="Click"></p>
 </form>
+<hr>
 </body>
 </html>
