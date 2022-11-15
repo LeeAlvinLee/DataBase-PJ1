@@ -13,7 +13,7 @@ public class Update {
     }
 
     private String update; // delete or update
-    private ArrayList<String> ssn;
+    private ArrayList<String> ssn=new ArrayList<String>();
     private String updateCategory;
     private String updateText;
 }

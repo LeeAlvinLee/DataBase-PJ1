@@ -17,11 +17,10 @@ public class DeleteRepository {
 
         // 연결
         try {
-
             // 접속 url과 사용자, 비밀번호
             String url = "jdbc:mysql://localhost:3306/mydb?serverTimezone=UTC";
             String user = "root";
-            String pwd ="toor";
+            String pwd ="fuckthepolice";
 
             con = DriverManager.getConnection(url, user, pwd);
             log.info("DB와 정상적으로 연결되었습니다.");
