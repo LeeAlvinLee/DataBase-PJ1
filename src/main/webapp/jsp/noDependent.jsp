@@ -13,11 +13,11 @@
     </style>
 </head>
 <body>
-<h1>선택한 직원들은 모두 가족이 없습니다!</h1>
+<h1>선택한 직원들의 가족정보가 없습니다!</h1>
 <form method="get" action="/">
-    <p>다른 직원을 선택해보세요</p>
+    <p>다른 직원을 선택해보세요!</p>
     <br>
-    <input type="submit" value="메인 화면으로 돌아가기">
+    <input type="submit" value="처음 화면으로 돌아가기">
 </form>
 </body>
 </html>

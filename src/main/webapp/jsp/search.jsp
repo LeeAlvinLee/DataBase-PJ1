@@ -3,8 +3,6 @@
 <%@ page import ="java.util.*" %>
 <%@ page import ="java.lang.*" %>
 <%@ page import ="com.example.demo.model.Search" %>
-<%@ page import="java.sql.ResultSet" %>
-<%@ page import="com.example.demo.model.Search" %>
 <%@ page import="com.example.demo.model.Dependent" %>
 <%!
     ArrayList<Boolean> check;
@@ -74,6 +72,16 @@
                 if(check.get(7)) {
             %>
             <td><%=searches.get(i).getDepartment()%></td>
+            <%
+                }
+                if(check.get(8)) {
+            %>
+            <td><%=searches.get(i).getCreated_at()%></td>
+            <%
+                }
+                if(check.get(9)) {
+            %>
+            <td><%=searches.get(i).getUpdated_at()%></td>
             <%
                 }
             %>

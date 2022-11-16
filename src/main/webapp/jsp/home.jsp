@@ -25,6 +25,7 @@
         <option value="salary">연봉</option>
         <option value="bdate">생일</option>
         <option value="supervisor">부하직원</option>
+        <option value="supervising">상사</option>
     </select>
 
     <select name="subCategory" id = "category">
@@ -63,6 +64,8 @@
     <label><input type="checkbox" name="salary" value="1" checked> Salary</label>
     <label><input type="checkbox" name="supervisor" value="1" checked> Supervisor</label>
     <label><input type="checkbox" name="department" value="1" checked> Department</label>
+    <label><input type="checkbox" name="created_at" value="1" checked> Created_at</label>
+    <label><input type="checkbox" name="updated_at" value="1" checked> Updated_at</label>
     <p><input type="submit" value="테이블 보여지기 버튼"></p>
 </form>
 <hr>
