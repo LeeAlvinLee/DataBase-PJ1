@@ -13,9 +13,9 @@
     </style>
 </head>
 <body>
-<h1>UPDATE에 실패하였습니다!</h1>
+<h1>UPDATE에 실패하였습니다</h1>
 <form method="get" action="/">
-    <p>UPDATE 정보를 정확하게 입력하였는지 확인하여주세요!</p><br>
+    <p>UPDATE 정보를 정확하게 입력하였는지 확인해주세요!</p><br>
     <br>
     <input type="submit" value="메인 화면으로 돌아가기">
 </form>
