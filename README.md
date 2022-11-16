@@ -1,9 +1,16 @@
 # Clone 후 주의 사항
+### <1>
 repository file에서
 1. 자신이 설정한 db 이름
 2. user name
 3. user pwd
 를 수정해주세요.
+### <2>
+기존 database 에 timestamp를 추가해주기 위해 밑 코드를 입력해주세요.
+ALTER TABLE EMPLOYEE
+ADD COLUMN created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+ADD COLUMN updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP;
+
 
 # DataBase-PJ1
 
