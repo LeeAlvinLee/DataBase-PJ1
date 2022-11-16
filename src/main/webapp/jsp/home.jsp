@@ -15,7 +15,7 @@
 <body>
 <h1>메인 페이지</h1>
 <form method="get" action="/search">
-    <h2>검색 범위</h2>
+    <h2 style = "display:inline">검색 범위          </h2>
     <select name = "mainCategory" onchange="categoryChange(this)">
         <option value="none" selected>전체</option>
         <option value="department">부서</option>
@@ -50,7 +50,8 @@
             }
         }
     </script>
-    <h2>검색 항목</h2>
+    <p></p>
+    <h2 style = "display:inline">검색 항목</h2>
     <label><input type="checkbox" name="name" value="1" checked> Name</label>
     <label><input type="checkbox" name="ssn" value="1" checked> Ssn</label>
     <label><input type="checkbox" name="bdate" value="1" checked> Bdate</label>
@@ -59,11 +60,11 @@
     <label><input type="checkbox" name="salary" value="1" checked> Salary</label>
     <label><input type="checkbox" name="supervisor" value="1" checked> Supervisor</label>
     <label><input type="checkbox" name="department" value="1" checked> Department</label>
-    <p><input type="submit" value="검색"></p>
+    <input type="submit" value="검색">
 </form>
 <form method = "get" action = "/insertPage">
-    <h2>직원 정보 추가</h2>
-    <p><input type="submit" value="직원 정보 추가 페이지로 가기"></p>
+    <h2 style ="display:inline">직원 정보 추가</h2>
+    <input type="submit" value="직원 정보 추가 페이지로 가기">
 </form>
 </body>
 </html>
