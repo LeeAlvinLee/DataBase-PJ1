@@ -18,12 +18,14 @@ public class SearchController {
 
     @GetMapping("/search")
     private String search(Model model, @RequestParam Map<String, String> params){
-
+        log.info(params.toString());
         ArrayList<Search> searches = searchService.search(params);
+        ArrayList<String> searches_2 = new ArrayList<>(10);
 
         model.addAttribute("check", searchService.getCheck());
         model.addAttribute("tableHeaders", searchService.getHeader());
         model.addAttribute("searches", searches);
+        model.addAttribute("tableChild", searches_2);
 
         return "/jsp/search.jsp";
     }
