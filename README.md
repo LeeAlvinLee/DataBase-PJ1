@@ -1,3 +1,10 @@
+# Clone 후 주의 사항
+repository file에서
+1. 자신이 설정한 db 이름
+2. user name
+3. user pwd
+를 수정해주세요.
+
 # DataBase-PJ1
 
 1. EMPLOYEE 테이블의 attribute들을 모두 출력하기
