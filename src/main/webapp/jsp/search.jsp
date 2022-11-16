@@ -19,7 +19,7 @@
     tableHeaders = (ArrayList<String>) request.getAttribute("tableHeaders");
     tableChild = (ArrayList<Dependent>) request.getAttribute("tableChild");
 %>
-<h1>검색 테이블 출력</h1>
+<h1>검색한 테이블 출력</h1>
 <form method = "post" name ="form" >
     <table border = "1">
         <th>선택</th>
