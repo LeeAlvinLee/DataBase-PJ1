@@ -5,19 +5,22 @@
 <%@ page import ="com.example.demo.model.Search" %>
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="com.example.demo.model.Search" %>
-
+<%@ page import="com.example.demo.model.Dependent" %>
 <%!
     ArrayList<Boolean> check;
     ArrayList<Search> searches;
     ArrayList<String> tableHeaders;
+    ArrayList<Dependent> tableChild;
 %>
+
 <%
     check = (ArrayList<Boolean>) request.getAttribute("check");
     searches = (ArrayList<Search>) request.getAttribute("searches");
     tableHeaders = (ArrayList<String>) request.getAttribute("tableHeaders");
+    tableChild = (ArrayList<Dependent>) request.getAttribute("tableChild");
 %>
-<h1>검색 테이블 출력</h1>
-<form method = "post" action="/updates">
+<h1>검색한 테이블 출력</h1>
+<form method = "post" name ="form" >
     <table border = "1">
         <th>선택</th>
         <%
@@ -79,8 +82,10 @@
             }
         %>
     </table>
-    <p><input type = "submit" name = "update" value = "DELETE"></p>
-    <p>수정 :
+    <p>
+    <span><input type = "submit" name = "update" value = "DELETE" onclick="javascript: form.action='/updates';"></span>
+        <span><input type = "submit" name = "update" value = "CHILD" onclick="javascript: form.action='/search/dependent';"></span>
+    <span>수정 :
         <select name = "updateCategory">
             <option value="address">Address</option>
             <option value="sex">Sex</option>
@@ -88,5 +93,28 @@
         </select>
         <input type = "text" name = "updateText">
         <input type = "submit" name = "update" value = "UPDATE">
+    </span>
+
     </p>
+    <table border = "1">
+        <th> Employee_name </th>
+        <th> Dependent_name </th>
+        <th> Sex </th>
+        <th> Bdate </th>
+        <th> Relationship </th>
+        <%
+            for(int i = 0; i < tableChild.size(); i++){
+        %>
+        <tr>
+            <td><%=tableChild.get(i).getParent_name()%></td>
+            <td><%=tableChild.get(i).getDependent_name()%></td>
+            <td><%=tableChild.get(i).getSex()%></td>
+            <td><%=tableChild.get(i).getBdate()%></td>
+            <td><%=tableChild.get(i).getRelationship()%></td>
+
+        </tr>
+        <%
+            }
+        %>
+    </table>
 </form>
