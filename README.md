@@ -10,7 +10,9 @@ repository file에서
 기존 database 에 timestamp를 추가해주기 위해 밑 코드를 입력해주세요.
 
 ALTER TABLE EMPLOYEE
+
 ADD COLUMN created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
 ADD COLUMN updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP;
 
 
