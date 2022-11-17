@@ -15,7 +15,7 @@
 <body>
 <h1>INSERT에 실패하였습니다!</h1>
 <form method="get" action="/">
-    <p>INSERT할 직원의 정보를 정확하게 입력하였는지 확인하여주세요!</p>
+    <p>INSERT할 직원의 정보를 정확하게 입력하였는지 확인해주세요!</p>
     <p>ex) Ssn을 정확하게 입력하였는지 확인해주세요!</p><br>
     <br>
     <input type="submit" value="처음으로 돌아가기">

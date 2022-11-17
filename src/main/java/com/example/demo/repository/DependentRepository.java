@@ -22,9 +22,9 @@ public class DependentRepository {
         try {
 
             // 접속 url과 사용자, 비밀번호
-            String url = "jdbc:mysql://localhost:3306/mydb?serverTimezone=UTC";
-            String user = "root";
-            String pwd ="fuckthepolice";
+            String url = "jdbc:mysql://localhost:3306/여기에db이름을 입력해주세요?serverTimezone=UTC";
+            String user = "여기에 user를 입력해주세요.";
+            String pwd ="여기에 pwd를 입력해주세요.";
 
             con = DriverManager.getConnection(url, user, pwd);
             log.info("DB와 정상적으로 연결되었습니다.");

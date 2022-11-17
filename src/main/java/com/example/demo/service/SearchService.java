@@ -30,7 +30,7 @@ public class SearchService {
         // 여기서 db에 접근해서 결과를 구한 뒤 model에 담아서 search 페이지 호출하면 됨
         check = new ArrayList<>();
         header = new ArrayList<>();
-        for(int i = 0; i < 8; i++) check.add(false);
+        for(int i = 0; i < 10; i++) check.add(false);
         String q = "";
         boolean mc = true;
         for(String key : searchParams.keySet()){
@@ -74,6 +74,16 @@ public class SearchService {
                 temp = "d.dname";
                 check.set(7,true);
                 header.add("DEPARTMENT");
+            }
+            else if(key.equals("created_at")) {
+                temp = "e.created_at as e_created_at";
+                check.set(8,true);
+                header.add("CREATED_AT");
+            }
+            else if(key.equals("updated_at")) {
+                temp = "e.updated_at as e_updated_at";
+                check.set(9,true);
+                header.add("UPDATED_AT");
             }
             else if(key.equals("mainCategory")) {
                 mainCategory = searchParams.get(key);
@@ -119,6 +129,12 @@ public class SearchService {
         }
         else if(mainCategory.equals("supervisor")) {
             w += "s.ssn=" + change(inputText);
+        }
+        else if(mainCategory.equals("supervising")){
+            String supervisorname[] = inputText.split(" ");
+            System.out.println(supervisorname);
+            w += "e.fname=" + change(supervisorname[0]) + " and " +
+                    "e.lname="+ change(supervisorname[1]);
         }
         return w;
     }

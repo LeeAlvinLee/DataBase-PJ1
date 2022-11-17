@@ -14,4 +14,8 @@ public class InsertService {
     private String makeInsertQuery(Employee employee){
         return "INSERT INTO EMPLOYEE VALUES " + employee.toString();
     }
+
+    private String change(String str){
+        return "'" + str + "'";
+    }
 }
