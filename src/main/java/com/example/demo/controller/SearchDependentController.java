@@ -24,14 +24,16 @@ public class SearchDependentController {
     private SearchService searchService = new SearchService();
     private ShowDependentService showDependentService = new ShowDependentService();
 
+    int dpcount=0;
+
     @PostMapping("/search/dependent")
     private String search(Model model, @ModelAttribute Update update){
 
         //log.info(update.getSsn().toString());
-        if (update.getSsn().isEmpty()) {
-                return "/jsp/noDependent.jsp";
-
-        }
+//        if (update.getSsn().isEmpty()) {
+//                return "/jsp/noDependent.jsp";
+//
+//        }
         Map<String, String> params = new HashMap<String, String>();
         params.put("mainCategory","none");
         params.put("inputText","");
@@ -52,6 +54,7 @@ public class SearchDependentController {
                 if(searches.get(j).getSsn().equals(searches_2.get(i).getParent_name())){
                     log.info("set name");
                     searches_2.get(i).setParent_name(searches.get(j).getName());
+                    dpcount++;
                 }
             }
         }
@@ -64,7 +67,12 @@ public class SearchDependentController {
         //추가입력
         //boolean search = ShowDependentService.search()
                 ///
+        if (dpcount==0){
+            System.out.println(dpcount);
+            return  "/jsp/noDependent.jsp";
+        }
 
+        dpcount=0;
         return "/jsp/search.jsp";
     }
 }
