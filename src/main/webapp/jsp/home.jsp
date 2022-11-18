@@ -64,8 +64,8 @@
     <label><input type="checkbox" name="salary" value="1" checked> Salary</label>
     <label><input type="checkbox" name="supervisor" value="1" checked> Supervisor</label>
     <label><input type="checkbox" name="department" value="1" checked> Department</label>
-    <label><input type="checkbox" name="created" value="1" checked> Created</label>
-    <label><input type="checkbox" name="modified" value="1" checked> Modified</label>
+    <label><input type="checkbox" name="created" value="1"> Created</label>
+    <label><input type="checkbox" name="modified" value="1"> Modified</label>
     <p><input type="submit" value="테이블 보여지기 버튼"></p>
 </form>
 <hr>

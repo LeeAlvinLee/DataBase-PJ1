@@ -17,6 +17,9 @@
 <form method="get" action="/">
     <p>INSERT할 직원의 정보를 정확하게 입력하였는지 확인해주세요!</p>
     <p>ex) Ssn을 정확하게 입력하였는지 확인해주세요!</p><br>
+    <p>ex) Middle Init 은 한글자로 입력해줘야합니다 !</p><br>
+    <p>ex) B-Date는 형식에 맞게 작성하여주세요 !</p><br>
+    <p>ex) Dno는 존재하는 부서번호로 작성하여 주세요 !</p><br>
     <br>
     <input type="submit" value="처음으로 돌아가기">
 </form>
