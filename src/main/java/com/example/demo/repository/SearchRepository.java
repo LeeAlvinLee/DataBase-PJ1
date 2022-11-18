@@ -71,10 +71,10 @@ public class SearchRepository {
                     search.setDepartment(checkNull(rs.getString("dname")));
                 }
                 if(check.get(8)){
-                    search.setCreated_at(checkNull(rs.getString("e_created_at")));
+                    search.setCreated(checkNull(rs.getString("e_created")));
                 }
                 if(check.get(9)){
-                    search.setUpdated_at(checkNull(rs.getString("e_updated_at")));
+                    search.setModified(checkNull(rs.getString("e_modified")));
                 }
                 searches.add(search);
             }

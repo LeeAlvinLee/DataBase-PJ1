@@ -75,15 +75,15 @@ public class SearchService {
                 check.set(7,true);
                 header.add("DEPARTMENT");
             }
-            else if(key.equals("created_at")) {
-                temp = "e.created_at as e_created_at";
+            else if(key.equals("created")) {
+                temp = "e.created as e_created";
                 check.set(8,true);
-                header.add("CREATED_AT");
+                header.add("CREATED");
             }
-            else if(key.equals("updated_at")) {
-                temp = "e.updated_at as e_updated_at";
+            else if(key.equals("modified")) {
+                temp = "e.modified as e_modified";
                 check.set(9,true);
-                header.add("UPDATED_AT");
+                header.add("MODIFIED");
             }
             else if(key.equals("mainCategory")) {
                 mainCategory = searchParams.get(key);
