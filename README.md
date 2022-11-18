@@ -34,7 +34,7 @@ ADD COLUMN updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMES
 9. 한 직원의 정보가 수정되면, 수정 날짜 항목
 (modified 항목 값 바꿔주기)
 10. 성별 남자인 직원 검색하기
-11. Salary>3000 이상 검색하기
+11. Salary>3000 검색하기
 12. 같은 상사를 가진 직원들 출력하기
 
 1-3 : 김재혁 / 4-6 : 이다슴 / 7-9 : 왕호은 / 10-12 : 전영서
