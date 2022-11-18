@@ -14,9 +14,9 @@ public class Search {
     private String supervisor = "";
     private String department = "";
 
-    private String created_at = "";
+    private String created = "";
 
-    private String updated_at = "";
+    private String modified = "";
 
     @Override
     public String toString() {
@@ -29,8 +29,8 @@ public class Search {
                 ", salary='" + salary + '\'' +
                 ", supervisor='" + supervisor + '\'' +
                 ", department='" + department + '\'' +
-                ", created_at='" + created_at + '\'' +
-                ", updated_at='" + updated_at + '\''+
+                ", created='" + created + '\'' +
+                ", modified='" + modified + '\''+
                 '}';
     }
 }

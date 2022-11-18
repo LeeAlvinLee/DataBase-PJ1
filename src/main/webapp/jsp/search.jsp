@@ -76,12 +76,12 @@
                 }
                 if(check.get(8)) {
             %>
-            <td><%=searches.get(i).getCreated_at()%></td>
+            <td><%=searches.get(i).getCreated()%></td>
             <%
                 }
                 if(check.get(9)) {
             %>
-            <td><%=searches.get(i).getUpdated_at()%></td>
+            <td><%=searches.get(i).getModified()%></td>
             <%
                 }
             %>
@@ -91,7 +91,7 @@
         %>
     </table>
     <p>
-    <span><input type = "submit" name = "update" value = "DELETE" onclick="javascript: form.action='/updates';"></span>
+        <span><input type = "submit" name = "update" value = "DELETE"></span></p>
         <span><input type = "submit" name = "update" value = "CHILD" onclick="javascript: form.action='/search/dependent';"></span>
     <span>수정 :
         <select name = "updateCategory">
@@ -100,10 +100,10 @@
             <option value="salary">Salary</option>
         </select>
         <input type = "text" name = "updateText">
-        <input type = "submit" name = "update" value = "UPDATE">
+        <input type = "submit" name = "update" value = "UPDATE" onclick="javascript: form.action='/updates';">
     </span>
-
-    </p>
+        </p>
+</form>
     <table border = "1">
         <th> Employee_name </th>
         <th> Dependent_name </th>
@@ -125,4 +125,3 @@
             }
         %>
     </table>
-</form>

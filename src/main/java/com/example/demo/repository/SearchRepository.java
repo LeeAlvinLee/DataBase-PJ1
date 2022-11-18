@@ -24,9 +24,9 @@ public class SearchRepository {
         try {
 
             // 접속 url과 사용자, 비밀번호
-            String url = "jdbc:mysql://localhost:3306/여기에db이름을 입력해주세요?serverTimezone=UTC";
-            String user = "여기에 user를 입력해주세요.";
-            String pwd ="여기에 pwd를 입력해주세요.";
+            String url = "jdbc:mysql://localhost:3306/mydb?serverTimezone=UTC";
+            String user = "root";
+            String pwd ="toor";
 
             con = DriverManager.getConnection(url, user, pwd);
             log.info("DB와 정상적으로 연결되었습니다.");
@@ -71,10 +71,10 @@ public class SearchRepository {
                     search.setDepartment(checkNull(rs.getString("dname")));
                 }
                 if(check.get(8)){
-                    search.setCreated_at(checkNull(rs.getString("e_created_at")));
+                    search.setCreated(checkNull(rs.getString("e_created")));
                 }
                 if(check.get(9)){
-                    search.setUpdated_at(checkNull(rs.getString("e_updated_at")));
+                    search.setModified(checkNull(rs.getString("e_modified")));
                 }
                 searches.add(search);
             }
