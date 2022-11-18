@@ -91,7 +91,6 @@
         %>
     </table>
     <p>
-        <span><input type = "submit" name = "update" value = "DELETE"></span></p>
         <span><input type = "submit" name = "update" value = "CHILD" onclick="javascript: form.action='/search/dependent';"></span>
     <span>수정 :
         <select name = "updateCategory">
@@ -101,6 +100,7 @@
         </select>
         <input type = "text" name = "updateText">
         <input type = "submit" name = "update" value = "UPDATE" onclick="javascript: form.action='/updates';">
+        <input type = "submit" name = "update" value = "DELETE" onclick="javascript: form.action='/updates';">
     </span>
         </p>
 </form>
