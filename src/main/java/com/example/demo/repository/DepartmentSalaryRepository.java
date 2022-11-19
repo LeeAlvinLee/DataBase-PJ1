@@ -7,16 +7,14 @@ import java.sql.*;
 import java.util.ArrayList;
 
 @Slf4j
-public class UpdateRepository {
-
+public class DepartmentSalaryRepository {
     Password pw = new Password();
 
-    public boolean update(ArrayList<String> queries){
-        boolean ret = true;
+    public boolean changedepartmentSal(String query){
         Connection con = null;
         PreparedStatement pstmt = null;
+        boolean ret = true;
 
-        // 연결
         try {
 
             // 접속 url과 사용자, 비밀번호
@@ -27,19 +25,17 @@ public class UpdateRepository {
             con = DriverManager.getConnection(url, user, pwd);
             log.info("DB와 정상적으로 연결되었습니다.");
 
-            for(String query : queries) {
-                String sql = query;
-                log.info("update sql : " + sql);
+            String sql = query;
+            log.info("update department salary sql : " + sql);
 
-                pstmt = con.prepareStatement(sql);
+            pstmt = con.prepareStatement(sql);
+            pstmt.executeUpdate();
 
-                pstmt.executeUpdate();
-            }
-
-        } catch (SQLException e){
+        } catch (
+                SQLException e){
             System.err.println("연결할 수 없습니다.");
             e.printStackTrace();
-            ret = false;
+            ret = false; // insert가 정상 작동하지 않았음을 알려줌
         }
 
         // 해제
@@ -50,6 +46,8 @@ public class UpdateRepository {
         } catch (SQLException e){
             e.printStackTrace();
         }
+
         return ret;
     }
+
 }

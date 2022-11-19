@@ -73,6 +73,10 @@
     <h2>직원 정보 추가</h2>
     <p><input type="submit" value="Click"></p>
 </form>
+<form method = "get" action = "/departmentSalaryPage">
+    <h2>부서 직원 Salary 변경</h2>
+    <p><input type="submit" value="Click"></p>
+</form>
 <hr>
 </body>
 </html>
